@@ -1,0 +1,146 @@
+.c-navigation {
+  max-width: 1400px;
+  margin: 0 auto;
+  flex: auto;
+  align-items: center;
+  display: flex;
+}
+
+.c-navigation__menu {
+  display: none;
+}
+
+.c-navigation__logo {
+  align-items: center;
+  display: flex;
+}
+
+.c-navigation__logo-icon {
+  height: 40px;
+  width: 40px;
+}
+
+.c-navigation__logo-text {
+  display: inline;
+  padding-left: 16px;
+  font-weight: normal;
+  font-size: 28px;
+}
+
+.c-navigation__links {
+  display: flex;
+  flex: 1 0 auto;
+}
+
+.c-navigation__links-collapse {
+  display: none;
+}
+
+.c-navigation__links ul {
+  list-style-type: none;
+  margin: 0 10px;
+  padding: 0;
+}
+
+.c-navigation__links ul li {
+  display: inline;
+}
+
+.c-navigation__link {
+  padding: 0 24px;
+  height: 40px;
+  text-decoration: none;
+  color: #744cbc;
+}
+
+.c-navigation__search {
+  display: flex;
+  margin-left: 16px;
+  flex: 0 1 auto;
+  max-width: 200px;
+  min-width: 200px;
+}
+
+.c-navigation__search-box {
+  border-radius: 4px;
+  background: #F5F7F9;
+  border: 1px solid #E6ECF1;
+}
+
+.c-navigation__search-input {
+  height: 38px;
+  background: transparent;
+  outline: none;
+  border: 0;
+  color: #9DAAB6;
+}
+
+.c-navigation__search-icon {
+  display: inline;
+  color: #9DAAB6;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+@media (max-width: 767px) {
+  .c-navigation {
+    margin: 0 10px;
+  }
+
+  .c-navigation__menu {
+    display: flex;
+    flex: 0 0 auto;
+    font-size: 24px;
+    margin-right: 10px;
+  }
+
+  .c-navigation__logo {
+    flex: 1 0 auto;
+  }
+
+  .c-navigation__links {
+    transition: all linear .2s;
+    width: 80%;
+    height: 100%;
+    display: block;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: -100%;
+    background-color: white;
+  }
+
+  .c-navigation__links.c-navigation__links--active {
+    left: 0;
+    box-shadow: 200px 0 rgba(0, 0, 0, .6);
+  }
+
+  .c-navigation__links-collapse {
+    display: flex;
+    height: 80px;
+    border-bottom: 1px solid #d4dadf;
+    font-size: 24px;
+    align-items: center;
+    padding: 0 16px;
+    color: #9DAAB6;
+  }
+
+  .c-navigation__links ul li {
+    display: block;
+    padding: 24px 0;
+  }
+
+  .c-navigation__search {
+    min-width: auto;
+    font-size: 24px;
+  }
+
+  .c-navigation__search-box {
+    background: transparent;
+    border: 0;
+  }
+
+  .c-navigation__search-input {
+    display: none;
+  }
+}
